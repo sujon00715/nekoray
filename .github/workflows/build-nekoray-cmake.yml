@@ -31,7 +31,7 @@ jobs:
       - name: Cache Common Download
         id: cache-common
         uses: actions/cache@v3
-        with:
+        with:update 
           path: artifacts.tgz
           key: CommonCache-${{ matrix.cross_os }}-${{ matrix.cross_arch }}-${{ hashFiles('libs/*.sh', 'go_status', '*.txt') }}
       - name: Install Golang
